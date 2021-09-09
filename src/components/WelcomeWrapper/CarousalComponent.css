@@ -1,0 +1,291 @@
+.carousal_compo{
+    position: relative;
+    overflow: hidden;
+}
+
+.carousal_image{
+    width: 100%;
+    height: 100%;
+    max-height: 91vh;
+    margin: 0;
+}
+
+.myButton{
+    color: white;
+    font-size: 18px;
+    height: 15vh;
+    width: 30px;
+    border-radius: 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+/*------------------------------------------- Progress Bar Styling---------------------------------------------------- */
+
+.progressBar{
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+}
+.MuiLinearProgress-colorPrimary{
+    background-color: transparent !important;
+}
+.MuiLinearProgress-root{
+    height: 12px !important;
+}
+.MuiLinearProgress-barColorPrimary{
+    background-color: rgba(0, 0, 0, 0.644) !important;
+}
+
+/*------------------------------------------- NavButton Divs Styling ----------------------------------------------------*/
+
+.rigthButtonDiv{
+    z-index: 1000;
+    position: absolute;
+    right: -25vh;
+    top: calc(50% - 26px);
+    height: 15vh;
+    width: 25vh;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+}
+
+.rightButtonDivTitle{
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 26px + 10vh);
+    height: 4vh;
+    width: 25vh;
+    background-color: rgba(255, 0, 0, 0);
+    transition: all 0.2s cubic-bezier(1, 0, 0, 1);
+    visibility: hidden;
+}
+
+.leftButtonDiv{
+    z-index: 1000;
+    position: absolute;
+    left: -25vh;
+    top: calc(50% - 26px);
+    height: 15vh;
+    width: 25vh;
+    background-color: blue;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+}
+
+/*------------------------------------------- Thumbnail Styling ----------------------------------------------------*/
+
+
+.carousal_thumbnail{
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    height: 13vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 1vh;
+}
+
+.carousal_thumbnail>img{
+    background-color:  #ffffff;
+    cursor: pointer;
+    height: 10vh;
+    width: 10vh;
+    margin: 0.8vh;
+    /* border: 5px solid red; */
+}
+
+/*------------------------------------------- Yellow Box Styling ----------------------------------------------------*/
+
+
+.carousal_box1{
+    z-index: 10;
+    position: absolute;
+    border: 3vh solid #F5BF23;
+    height: 80%;
+    width: 22%;
+    left: 10%;
+    top: 7%;
+    transform: translateY(-80vh);
+    animation: boxAnimation 1s linear infinite,box1Animation 1s linear;
+    cursor: pointer;
+}
+
+.carousal_box2{
+    z-index: 1022;
+    position: absolute;
+    background-color:  #00000000;
+    height: 25%;
+    width: 40%;
+    left: 10%;
+    top: 35%;
+    overflow: hidden;
+}
+
+.carousal_box2_child{
+    z-index: 1022;
+    height: 100%;
+    width: 100%;
+    background-color:  #ffffff;
+    transform: translateX(-40vw);
+    transition: all 1s ease-in-out;
+    animation: box2Animation 1s linear;
+}
+
+.carousal_box3{
+    margin-top: 0.5vh;
+    z-index: 1022;
+    position: absolute;
+    background-color:  #ffffff00;
+    height: 12%;
+    width: 35%;
+    left: 10%;
+    top: 60%;
+    overflow: hidden;
+}
+
+.carousal_box3_child{
+    z-index: 1022;
+    height: 100%;
+    width: 100%;
+    background-color:  #ffffff;
+    transform: translateX(-35vw);
+    transition: all 1s ease-in-out;
+    animation: box3Animation 1s linear;
+}
+
+.carousal_head{
+    font-size: 4rem;
+    font-weight: 800;
+    position: absolute;
+    z-index: 15;
+    height: 25%;
+    width: 40%;
+    left: 10%;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    animation: textAnimation 1s linear forwards;
+    animation-delay: 0.5s;
+
+}
+
+.carousal_text{
+    font-size: 1.5rem;
+    font-weight: 800;
+    position: absolute;
+    z-index: 15;
+    top: 60%;
+    left: 10%;
+    height: 12%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    animation: textAnimation 1s linear forwards;
+    animation-delay: 0.5s;
+}
+
+.carousal_button{
+    position: absolute;
+    z-index: 15;
+    top: 72%;
+    left: 10%;
+
+}
+
+.carousal_verticalBlocks1{
+    position: absolute;
+    z-index: 15;
+    left: 18%;
+    height: 1.2vh;
+    width: 1.2vh;
+    background-color: black;
+    animation: blocksAnimation 8s linear infinite;
+    animation-direction: alternate;
+    animation-delay: 0;
+}
+
+.carousal_verticalBlocks2{
+    position: absolute;
+    z-index: 15;
+    left: 36%;
+    height: 1.2vh;
+    width: 1.2vh;
+    background-color: black;
+    animation: blocksAnimation 8s linear infinite;
+    animation-direction: alternate;
+    animation-delay: -8s;
+}
+
+.carousal_verticalBlocks3{
+    position: absolute;
+    z-index: 15;
+    left: 54%;
+    height: 1.2vh;
+    width: 1.2vh;
+    background-color: black;
+    animation: blocksAnimation 8s linear infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+
+.carousal_verticalBlocks4{
+    position: absolute;
+    z-index: 15;
+    left: 72%;
+    height: 1.2vh;
+    width: 1.2vh;
+    background-color: black;
+    animation: blocksAnimation 8s linear infinite;
+    animation-direction: alternate;
+    animation-delay: -8s;
+}
+
+@keyframes boxAnimation {
+    from { transform: rotate(0deg) translateX(2px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(2px) rotate(-360deg); }
+}
+
+@keyframes box1Animation {
+    from { transform: translateY(-80vh); }
+    to   { transform: translateY(0); }
+}
+
+@keyframes box2Animation {
+    from { transform: translateX(-40vw); }
+    to   { transform: translateX(40vw); }
+}
+
+@keyframes box3Animation {
+    from { transform: translateX(-35vw); }
+    to   { transform: translateX(35vw); }
+}
+
+@keyframes textAnimation {
+    from {visibility: hidden;}
+    to   { visibility: visible; }
+}
+
+@keyframes blocksAnimation {
+    from {top: 0; }
+    to   {top: 95%; }
+}

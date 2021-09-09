@@ -1,0 +1,6 @@
+.section1{
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

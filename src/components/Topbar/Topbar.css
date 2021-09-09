@@ -1,0 +1,89 @@
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12vw;
+    align-items: center;
+    background-color: #eeeeee;
+}
+
+.topbar_contact{
+    flex: 1;
+    display: flex;
+}
+
+.topbar_contact>div{
+    justify-content: center;
+    font-size: 12px;
+    padding-right: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.topbar_contact i{
+    vertical-align: middle;
+    background-color: rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.01);
+    padding: 3px;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 14px;
+    margin-right: 5px;
+}
+
+.topbar_appointment{
+    text-align: right;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.topbar_appointment>div{
+    background-color: #F5BF23;
+    padding: 1vh 20px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    margin-left: -1px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 650;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+    transition: all 0.2s linear;
+}
+
+.topbar_appointment>div:hover{
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 1250px) {
+    .topbar{
+        padding: 0 4vw;
+    }
+  }
+
+@media screen and (max-width: 740px) {
+    .topbar_contact {
+      flex-direction: column;
+      padding: 0.5em 0;
+    }
+    .topbar_contact>div{
+        justify-content: start;
+        margin-bottom: 5px;
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    .topbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5em 2em;
+    }
+  }

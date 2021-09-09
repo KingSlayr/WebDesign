@@ -1,0 +1,17 @@
+.Section1Card{
+    background-color: blue;
+    margin: 1vh;
+    overflow: hidden;
+}
+
+
+.Section1Card>img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 550px) {
+    .Section1Card{
+        width: 100%;
+    }
+  }
